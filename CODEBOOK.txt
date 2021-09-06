@@ -1,0 +1,18 @@
+This codebook provides additional information to the codebooks originally
+contained in "UCI HAR Dataset/".
+
+The script "run_analysis.R" will merge and clean training and test data sets
+from "UCI HAR Dataset/" and generate two data sets in the csv format:
+
+"data_mean-std_step4.csv" ->
+This data set merges both training and test set, with only the measurements with 
+"mean" or "std"" (case-insensitive) in the name being considered. The variable
+names are descriptive. Two more columns, activity (descriptive) and subject 
+(number), are added.
+
+"data_ave_step5.csv" ->
+This data set derives from the "data_mean-std_step4.csv" (set-4). It contains 
+mean values of all the variable in set-4, except for activity and subject 
+columns. The mean evaluation is done with observations grouped by BOTH
+activity and subject. The name of variables stay the same as in set-4, while the
+values are in fact mean values. 
